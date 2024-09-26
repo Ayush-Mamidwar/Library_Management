@@ -1,0 +1,14 @@
+{
+  "name": "lib_management",
+  "version": "1.0.0",
+  "description": "\"Library Management System\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayush Mamidwar",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
