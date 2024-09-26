@@ -1,4 +1,5 @@
 const BorrowManager = require('./borrowManager');
+
 class Library {
   constructor() {
     this.books = [];
@@ -18,6 +19,10 @@ class Library {
 
   borrowBook(isbn) {
     this.borrowManager.borrowBook(isbn);
+  }
+
+  returnBook(isbn) {
+    this.borrowManager.returnBook(isbn);
   }
 
   getAvailableBooks() {
