@@ -1,12 +1,11 @@
-const Book = require('./book');
-
+const BorrowManager = require('./borrowManager');
 class Library {
   constructor() {
     this.books = [];
+    this.borrowManager = new BorrowManager(this);
   }
 
   addBook(book) {
-    // Check for duplicate ISBN
     if (this.books.find(b => b.isbn === book.isbn)) {
       throw new Error('Book with this ISBN already exists');
     }
@@ -15,6 +14,14 @@ class Library {
 
   getBooks() {
     return this.books;
+  }
+
+  borrowBook(isbn) {
+    this.borrowManager.borrowBook(isbn);
+  }
+
+  getAvailableBooks() {
+    return this.borrowManager.getAvailableBooks();
   }
 }
 
