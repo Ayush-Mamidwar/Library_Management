@@ -1,14 +1,16 @@
 {
-  "name": "lib_management",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "\"Library Management System\"",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage" 
   },
-  "author": "Ayush Mamidwar",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^29.7.0"
+  "devDependencies": {
+    "jest": "^28.0.0", 
+    "jest-html-reporters": "^3.0.0" 
+  },
+  "jest": {
+    "reporters": [
+      "default"
+    ]
   }
 }
